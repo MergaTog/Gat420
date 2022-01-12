@@ -30,6 +30,7 @@ public class Steering : MonoBehaviour
         Vector3 point = rotation * (Vector3.forward * wanderRadius);
         Vector3 forward = agent.transform.forward * wanderDistance;
         Vector3 force = CalculateSteering(agent, forward + point);
+        Debug.DrawLine(transform.position, transform.position + force);
         return force;
     }
 

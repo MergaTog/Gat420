@@ -23,7 +23,7 @@ public class AutonomousAgent : Agent
         else if (gameObjects.Length != 0)
         {
             Debug.DrawLine(transform.position, gameObjects[0].transform.position);
-            Vector3 force = steering.Seek(this, gameObjects[0]);
+            Vector3 force = steering.Flee(this, gameObjects[0]);
             acceleration += force.normalized * 3;
         }
 
